@@ -1,0 +1,35 @@
+#main{
+    border:solid #999 1px;
+    width: 640px;
+    height:480;
+}
+
+#thumbArea{
+border:solid #999 1px;
+width: 590px;
+padding: 10px;
+}
+
+#buttons{
+width: 300px;
+height: 300px;
+}
+
+#button{
+    background-color: #ccc;
+    border:solid #999 1px;
+    width: 620px;
+    padding: 10px;
+}
+
+.thumb{
+    width: 90px;
+    height: 90px;
+    border:solid #ccc 2px;
+    opacity: 0.6;
+}
+
+.select{
+    border:solid #336 2px;
+    opacity:1.0;
+}

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <!-- <tittle>slide show</tittle> -->
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js"></script>
+</head>
+
+
+<body>
+    <image src="images/resize_image/image0.jpg" id="main"></image>
+    <div id="thumbArea">
+        <img src="images/resize_image/image0.jpg" class="thumb select" onclick="showImage(0)">
+        <img src="images/resize_image/image1.jpg" class="thumb" onclick="showImage(1)">
+        <img src="images/resize_image/image2.jpg" class="thumb" onclick="showImage(2)">
+        <img src="images/resize_image/image3.jpg" class="thumb" onclick="showImage(3)">
+        <img src="images/resize_image/image4.jpg" class="thumb" onclick="showImage(4)">
+        <img src="images/resize_image/image5.jpg" class="thumb" onclick="showImage(5)">
+    </div>
+
+    <div id="buttons">
+        <table>
+            <th>
+                <button style="width:200px ; height: 200px;" type="button" id="buttonStart" onclick="startSlideShow()">
+                    <img src="images/button/start.png">
+                </button>
+            </th>
+            <th>
+                <button style="width:200px ; height: 200px;" type="button" id="buttonPause" onclick="pauseSlideShow()">
+                    <img src="images/button/pause.png">
+                </button>
+            </th>
+            <th>
+                <button style="width:200px ; height: 200px;" type="button" id="buttonStop" onclick="stopSlideShow()">
+                    <img src="images/button/stop.png">
+                </button>
+            </th>
+        </table>
+    </div>
+    音源選択：
+    <select id="music" onchange="changeMusic()">
+        <option value="0">サンプル1
+        <option value="1">サンプル2
+        <option value="2">サンプル3
+        <option value="3">サンプル4
+        <option value="4">サンプル5
+        <option value="5">サンプル6
+        <option value="6">サンプル7
+    </select>
+
+    <br><br>
+    <!-- audioタグにcontrols を追加するとコントロールボタンができる -->
+    <audio id="audioID" loop>
+        <source src="BGM/1022.mp3">
+        </source>
+    </audio>
+    <audio id="sanple0" loop>
+        <source src="BGM/1022.mp3">
+        </source>
+    </audio>
+    <audio id="sanple1" loop>
+        <source src="BGM/1858.mp3">
+        </source>
+    </audio>
+    <audio id="sanple2" loop>
+        <source src="BGM/2452.mp3">
+        </source>
+    </audio>
+    <audio id="sanple3" loop>
+        <source src="BGM/2558.mp3">
+        </source>
+    </audio>
+    <audio id="sanple4" loop>
+        <source src="BGM/2870.mp3">
+        </source>
+    </audio>
+    <audio id="sanple5" loop>
+        <source src="BGM/4712.mp3">
+        </source>
+    </audio>
+    <audio id="sanple6" loop>
+        <source src="BGM/710.mp3">
+        </source>
+    </audio>
+
+    Volume[0.0 - 1.0]:
+    <input type="range" id="volume" min="0" max="1" step="0.01" value="1.0" onchange="changeVolume()">
+
+    <div>
+        <input type="button" style="width: 90px; height: 50px;" value="サンプル1" onclick="playthis(0)">
+        <input type="button" style="width: 90px; height: 50px;" value="サンプル2" onclick="playthis(1)">
+        <input type="button" style="width: 90px; height: 50px;" value="サンプル3" onclick="playthis(2)">
+        <input type="button" style="width: 90px; height: 50px;" value="サンプル4" onclick="playthis(3)">
+        <input type="button" style="width: 90px; height: 50px;" value="サンプル5" onclick="playthis(4)">
+        <input type="button" style="width: 90px; height: 50px;" value="サンプル6" onclick="playthis(5)">
+        <input type="button" style="width: 90px; height: 50px;" value="サンプル7" onclick="playthis(6)">
+    </div>
+
+    <br><br>
+
+
+</body>
+
+</html>
